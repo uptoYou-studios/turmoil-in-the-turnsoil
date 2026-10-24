@@ -10,8 +10,8 @@
     { "label": "About uptoYou Studios", "href": "/about-studio" }
   ],
   "assets": {
-    "logoVertical": { "filename": "logo-v.png", "url": null },
-    "logoStudio": { "filename": "logo-utys.png", "url": null },
+    "logoVertical": { "filename": "", "url": null },
+    "logoStudio": { "filename": "", "url": null },
     "fonts": {
       "title": { "filename": "THIORN.otf", "url": null, "format": "opentype" },
       "body": { "filename": "BubbleSans.otf", "url": null, "format": "opentype" },

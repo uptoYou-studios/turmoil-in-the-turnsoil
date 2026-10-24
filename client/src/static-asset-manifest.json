@@ -1,11 +1,5 @@
 [
   {
-    "filename": "ep0.pdf",
-    "url": "ep0.pdf",
-    "category": "pdf",
-    "is_published": true
-  },
-  {
     "filename": "skeletors.png",
     "url": "skeletors.png",
     "category": "image",
@@ -15,6 +9,12 @@
     "filename": "wormfolk.png",
     "url": "wormfolk.png",
     "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "episode-0.pdf",
+    "url": "episode-0.pdf",
+    "category": "pdf",
     "is_published": true
   },
   {
@@ -60,12 +60,6 @@
     "is_published": true
   },
   {
-    "filename": "logo-utys.png",
-    "url": "logo-utys.png",
-    "category": "image",
-    "is_published": true
-  },
-  {
     "filename": "sediments.png",
     "url": "sediments.png",
     "category": "image",
@@ -78,12 +72,6 @@
     "is_published": true
   },
   {
-    "filename": "logo-v.png",
-    "url": "logo-v.png",
-    "category": "image",
-    "is_published": true
-  },
-  {
     "filename": "firebeet.png",
     "url": "firebeet.png",
     "category": "image",
@@ -93,6 +81,102 @@
     "filename": "firebeet-cute.png",
     "url": "firebeet-cute.png",
     "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/ep0.pdf",
+    "url": "site-assets/ep0.pdf",
+    "category": "pdf",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/skeletors.png",
+    "url": "site-assets/skeletors.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/wormfolk.png",
+    "url": "site-assets/wormfolk.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/trailer.mp4",
+    "url": "site-assets/trailer.mp4",
+    "category": "media",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/leader.png",
+    "url": "site-assets/leader.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/ZUDJ-I.TTF",
+    "url": "site-assets/ZUDJ-I.TTF",
+    "category": "media",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/yanagi.png",
+    "url": "site-assets/yanagi.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/yanagi-cute.png",
+    "url": "site-assets/yanagi-cute.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/soldiers.png",
+    "url": "site-assets/soldiers.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/THIORN.otf",
+    "url": "site-assets/THIORN.otf",
+    "category": "media",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/sediments.png",
+    "url": "site-assets/sediments.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/BubbleSans.otf",
+    "url": "site-assets/BubbleSans.otf",
+    "category": "media",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/firebeet.png",
+    "url": "site-assets/firebeet.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "site-assets/firebeet-cute.png",
+    "url": "site-assets/firebeet-cute.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "__manus__/version.json",
+    "url": "__manus__/version.json",
+    "category": "media",
+    "is_published": true
+  },
+  {
+    "filename": "__manus__/debug-collector.js",
+    "url": "__manus__/debug-collector.js",
+    "category": "media",
     "is_published": true
   }
 ]
