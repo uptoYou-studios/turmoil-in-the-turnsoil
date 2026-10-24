@@ -1,0 +1,96 @@
+{
+  "title": "Turmoil in the Turnsoil",
+  "studioName": "uptoYou Studios",
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "Episodes", "href": "/episodes" },
+    { "label": "Devos", "href": "/devos" },
+    { "label": "Characters", "href": "/characters" },
+    { "label": "About Turmoil in the Turnsoil", "href": "/about-turmoil" },
+    { "label": "About uptoYou Studios", "href": "/about-studio" }
+  ],
+  "assets": {
+    "logoVertical": { "filename": "logo-v.png", "url": null },
+    "logoStudio": { "filename": "logo-utys.png", "url": null },
+    "fonts": {
+      "title": { "filename": "THIORN.otf", "url": null, "format": "opentype" },
+      "body": { "filename": "BubbleSans.otf", "url": null, "format": "opentype" },
+      "emphasis": { "filename": "ZUDJ-I.TTF", "url": null, "format": "truetype" }
+    }
+  },
+  "home": {
+    "introStart": "Dive into the world of Turmoil in the Turnsoil, following the allegorical journey of the young warrior Yanagi",
+    "introMiddle": "—born from the dirt, bound by prophecy, and desperately wanting to return to Earth—alongside her passionate, fire-wielding guide Firebeet",
+    "yanagiSketch": { "filename": "yanagi-cute.png", "url": null },
+    "firebeetSketch": { "filename": "firebeet-cute.png", "url": null },
+    "verse": "“Wherefore he saith, Awake thou that sleepest, and arise from the dead, and Christ shall give thee light.” — Ephesians 5:14",
+    "trailer": { "audioFileName": "trailer.mp3", "videoFileName": "trailer.mp4" }
+  },
+  "newsletter": {
+    "heading": "Stay Updated",
+    "prompt": "Drop your email below to get notified when new episodes drop:"
+  },
+  "episodes": [
+    {
+      "number": "0",
+      "fileName": "ep0.pdf",
+      "missingMessage": "We had trouble digging this one up! The creator is busy at work on this episode."
+    },
+    {
+      "number": "1",
+      "fileName": "ep1.pdf",
+      "missingMessage": "We had trouble digging this one up! The creator is busy at work on this episode."
+    }
+  ],
+  "devos": [
+    {
+      "number": "0",
+      "fileName": "devo0.pdf",
+      "missingMessage": "We had trouble digging this one up! The creator is busy at work on this episode."
+    },
+    {
+      "number": "1",
+      "fileName": "devo1.pdf",
+      "missingMessage": "We had trouble digging this one up! The creator is busy at work on this episode."
+    }
+  ],
+  "characters": [
+    {
+      "name": "Yanagi",
+      "description": "A human, born from the soil, tasked with fulfilling an ancient prophecy, all the while searching for a way home.",
+      "image": { "filename": "yanagi.png", "url": null }
+    },
+    {
+      "name": "Firebeet",
+      "description": "A passionate, fiery guide who mentors Yanagi and serves as a wanted rebel against the Regime.",
+      "image": { "filename": "firebeet.png", "url": null }
+    },
+    {
+      "name": "Wormfolk",
+      "description": "As the primary residents of Turnsoil, this kind and harmless colony are brutally oppressed by the Regime.",
+      "image": { "filename": "wormfolk.png", "url": null }
+    },
+    {
+      "name": "Skeletors",
+      "description": "Weak-minded and easily swayed followers who are corrupted by wicked propaganda.",
+      "image": { "filename": "skeletors.png", "url": null }
+    },
+    {
+      "name": "Sediments",
+      "description": "A common class defined by their indifference to oppression and suffering.",
+      "image": { "filename": "sediments.png", "url": null }
+    },
+    {
+      "name": "Soldiers",
+      "description": "The ruthless underground militia enforcing the Supreme Leader's will.",
+      "image": { "filename": "soldiers.png", "url": null }
+    },
+    {
+      "name": "Supreme Leader",
+      "description": "An eight-legged autocrat ruling over the Regime and leading the Soldiers in their reign of terror over Turnsoil.",
+      "image": { "filename": "leader.png", "url": null }
+    }
+  ],
+  "aboutTurmoil": "Turmoil in the Turnsoil is an allegorical journey into a dark underground world, built to explore what it means to stand firm for justice when the culture demands compliance. Scripture reminds us that “him that knoweth to do good, and doeth it not, to him it is sin” (James 4:17), which drives the core moral conflict of the story. The narrative directly confronts systemic cruelty and the call to defend the vulnerable, echoing the mandate to “do justice to the afflicted and needy” (Psalm 82:3). In a world that fiercely opposes truth, this story reflects the Christian call to “shine as lights in the world, holding forth the word of life” (Philippians 2:15-16). It is an atmospheric, spooky adventure crafted deliberately to be entirely free of the dark, demonic elements that rightly concern believers, focusing instead on what is true, honest, just, and pure (Philippians 4:8), while fighting “the rulers of the darkness of this world” (Ephesians 6:12).",
+  "aboutStudio": "uptoYou Studios is an independent studio by Peter Turner, dedicated to exploring deep themes across literature, art, music, film, RPGs, visual novels, and alternative immersive storytelling."
+}

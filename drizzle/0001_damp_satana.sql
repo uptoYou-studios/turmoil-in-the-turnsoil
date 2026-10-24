@@ -1,0 +1,2 @@
+ALTER TABLE `siteAssets` MODIFY COLUMN `category` enum('images','logos','audio','video','episodes','fonts') NOT NULL;--> statement-breakpoint
+ALTER TABLE `siteAssets` ADD `isPublished` boolean DEFAULT false NOT NULL;

@@ -1,0 +1,143 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0;
+  --background: #f4f1e9;
+  --foreground: #191816;
+  --card: #fffefa;
+  --card-foreground: #191816;
+  --popover: #fffefa;
+  --popover-foreground: #191816;
+  --primary: #0000ee;
+  --primary-foreground: #fff;
+  --secondary: #eae6dc;
+  --secondary-foreground: #191816;
+  --muted: #eae6dc;
+  --muted-foreground: #555;
+  --accent: #0000ee;
+  --accent-foreground: #fff;
+  --destructive: #b00000;
+  --destructive-foreground: #fff;
+  --border: #aaa69d;
+  --input: #777;
+  --ring: #0000ee;
+  --sidebar: #fffefa;
+  --sidebar-foreground: #191816;
+  --sidebar-primary: #0000ee;
+  --sidebar-primary-foreground: #fff;
+  --sidebar-accent: #eae6dc;
+  --sidebar-accent-foreground: #191816;
+  --sidebar-border: #aaa69d;
+  --sidebar-ring: #0000ee;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { background: #f4f1e9; color: #191816; }
+body {
+  margin: 0;
+  background: #f4f1e9;
+  color: #191816;
+  font-family: 'TurnsoilBody', 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+a { color: #0000ee; text-decoration: underline; }
+a:visited { color: #551a8b; }
+a:active { color: #f00; }
+button, input { font: inherit; }
+.page {
+  width: min(100% - 32px, 780px);
+  margin: 24px auto;
+  border: 1px solid #aaa69d;
+  padding: 22px 28px 28px;
+  background: #fffefa;
+}
+.site-header { margin-bottom: 14px; }
+.site-title { margin: .45em 0 .1em; font-family: 'TurnsoilTitle', 'Times New Roman', Times, serif; font-size: 2em; line-height: 1.16; }
+h2, h3, .notable { font-family: 'TurnsoilEmphasis', 'Times New Roman', Times, serif; }
+nav { padding: 3px 0 8px; line-height: 1.9; }
+section { margin: 0; padding: 17px 0 20px; border-bottom: 1px solid #cbc7be; }
+section h2 { margin: 0 0 10px; font-size: 1.35em; }
+section h3 { margin: 1em 0 .4em; font-size: 1.08em; }
+p { margin: .55em 0; }
+.asset-image { max-width: 100%; height: auto; }
+.asset-placeholder { display: inline-block; border: 1px solid #aaa69d; padding: 4px 7px; background: #f8f6f0; color: #49463f; font-size: .92em; }
+.inline-art { min-width: 98px; min-height: 34px; vertical-align: middle; }
+.home-intro { margin: 11px 0; }
+blockquote { margin: 17px 18px; padding-left: 12px; border-left: 2px solid #b7b1a5; }
+.trailer-block { margin: 15px 0; }
+.trailer-block audio { display: block; width: min(100%, 440px); margin: 8px 0; }
+.trailer-video { display: block; width: min(100%, 640px); max-height: 70vh; margin: 8px 0; background: #000; }
+.newsletter { margin: 16px 0 3px; padding: 10px 12px; border: 1px solid #d2cec4; background: #faf8f2; }
+.newsletter h3 { margin-top: 0; }
+.newsletter small { color: #55514a; }
+.newsletter-honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+input[type="email"] { width: 220px; max-width: 100%; height: 28px; border: 1px solid #777; padding: 3px 5px; background: #fff; color: #000; }
+button { border: 1px solid #666; padding: 3px 9px; background: #eeeae1; color: #191816; cursor: pointer; }
+button:hover { background: #e3ded2; }
+.text-link { border: 0; padding: 0; background: transparent; color: #0000ee; text-decoration: underline; }
+button:disabled { cursor: not-allowed; opacity: .6; }
+select, input[type="file"] { max-width: 100%; font: inherit; }
+.file-upload-form { margin: 14px 0; padding: 10px 12px; border: 1px solid #d2cec4; background: #faf8f2; }
+.stored-asset-list { list-style: none; padding: 0; }
+.stored-asset { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0; padding: 10px 0; border-bottom: 1px dotted #cbc7be; }
+.stored-asset small { overflow-wrap: anywhere; }
+ol { padding-left: 2em; }
+li { margin: .55em 0; }
+.character-entry { margin: 16px 0 20px; padding-bottom: 13px; border-bottom: 1px dotted #cbc7be; }
+.character-entry:last-child { border-bottom: 0; }
+.character-entry p { margin: 0 0 7px; }
+.character-image { display: block; max-width: 240px; max-height: 240px; object-fit: contain; object-position: left center; }
+.studio-logo { display: block; max-width: 240px; max-height: 180px; object-fit: contain; object-position: left center; }
+footer { padding-top: 9px; }
+footer p { margin: .35em 0; }
+@media (max-width: 560px) {
+  .page { width: calc(100% - 20px); margin: 10px auto; padding: 15px 15px 20px; }
+  nav span { line-height: 1.9; }
+  .stored-asset { align-items: flex-start; flex-direction: column; }
+  .logo-vertical { max-width: 140px; max-height: 120px; }
+  input[type="email"] { width: min(220px, 60vw); }
+}
