@@ -131,15 +131,31 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
         } else if (!assetUrl.startsWith("http")) {
           assetUrl = base + assetUrl.replace(/^\/+/, "");
         }
+      for (const asset of staticAssetRows) {
+        let assetUrl = asset.url;
+        if (!assetUrl) {
+          assetUrl = base + asset.filename;
+        } else if (!assetUrl.startsWith("http")) {
+          assetUrl = base + assetUrl.replace(/^\/+/, "");
+        }
         byFilename[asset.filename] = {
         ...asset,
-        url: `${import.meta.env.BASE_URL}site-assets/${encodeURIComponent(asset.filename)}`,
+          url: assetUrl,
+        };
+      }
       };
     }
     const seenSupabase = new Set<string>();
     for (const asset of supabaseAssets) {
       if (asset.url && !seenSupabase.has(asset.filename)) {
         seenSupabase.add(asset.filename);
+      for (const asset of staticAssetRows) {
+        let assetUrl = asset.url;
+        if (!assetUrl) {
+          assetUrl = base + asset.filename;
+        } else if (!assetUrl.startsWith("http")) {
+          assetUrl = base + assetUrl.replace(/^\/+/, "");
+        }
         byFilename[asset.filename] = {
         filename: asset.filename,
         category: asset.category,
