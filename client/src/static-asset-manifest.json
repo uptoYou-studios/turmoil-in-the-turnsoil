@@ -1,1 +1,98 @@
-[]
+[
+  {
+    "filename": "ep0.pdf",
+    "url": "ep0.pdf",
+    "category": "pdf",
+    "is_published": true
+  },
+  {
+    "filename": "skeletors.png",
+    "url": "skeletors.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "wormfolk.png",
+    "url": "wormfolk.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "trailer.mp4",
+    "url": "trailer.mp4",
+    "category": "media",
+    "is_published": true
+  },
+  {
+    "filename": "leader.png",
+    "url": "leader.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "ZUDJ-I.TTF",
+    "url": "ZUDJ-I.TTF",
+    "category": "media",
+    "is_published": true
+  },
+  {
+    "filename": "yanagi.png",
+    "url": "yanagi.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "yanagi-cute.png",
+    "url": "yanagi-cute.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "soldiers.png",
+    "url": "soldiers.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "THIORN.otf",
+    "url": "THIORN.otf",
+    "category": "media",
+    "is_published": true
+  },
+  {
+    "filename": "logo-utys.png",
+    "url": "logo-utys.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "sediments.png",
+    "url": "sediments.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "BubbleSans.otf",
+    "url": "BubbleSans.otf",
+    "category": "media",
+    "is_published": true
+  },
+  {
+    "filename": "logo-v.png",
+    "url": "logo-v.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "firebeet.png",
+    "url": "firebeet.png",
+    "category": "image",
+    "is_published": true
+  },
+  {
+    "filename": "firebeet-cute.png",
+    "url": "firebeet-cute.png",
+    "category": "image",
+    "is_published": true
+  }
+]
