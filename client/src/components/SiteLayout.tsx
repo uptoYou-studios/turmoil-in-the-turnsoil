@@ -124,18 +124,11 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
   const assetsByFilename = useMemo(() => {
     const byFilename: Record<string, StoredSiteAsset> = {};
     if (isGitHubPages) {
-            for (const asset of staticAssetRows) {
+      for (const asset of staticAssetRows) {
         let assetUrl = asset.url;
         if (!assetUrl) {
           assetUrl = base + asset.filename;
         } else if (!assetUrl.startsWith("http")) {
-          assetUrl = base + assetUrl.replace(/^\/+/, "");
-        }
-        byFilename[asset.filename] = {
-          ...asset,
-          url: assetUrl,
-        };
-      } else if (!assetUrl.startsWith("http")) {
           assetUrl = base + assetUrl.replace(/^\/+/, "");
         }
         byFilename[asset.filename] = {
