@@ -20,6 +20,8 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Build project
+        env:
+          VITE_GITHUB_PAGES: "true"
         run: npm run build
 
       - name: Upload artifact
