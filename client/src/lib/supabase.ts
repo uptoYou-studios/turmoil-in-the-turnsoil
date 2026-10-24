@@ -154,3 +154,5 @@ export async function subscribeEmail(email: string, honeypot = "") {
 
   return { savedInDatabase, forwarded, forwardingConfigured: true, ignoredAsSpam: false };
 }
+
+export const isFormspreeConfigured = false;
