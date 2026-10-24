@@ -121,7 +121,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
     return () => { active = false; };
   }, [session]);
 
-  const assetsByFilename = useMemo(() => {
+    const assetsByFilename = useMemo(() => {
     const byFilename: Record<string, StoredSiteAsset> = {};
     if (isGitHubPages) {
       for (const asset of staticAssetRows) {
@@ -131,38 +131,14 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
         } else if (!assetUrl.startsWith("http")) {
           assetUrl = base + assetUrl.replace(/^\/+/, "");
         }
-      for (const asset of staticAssetRows) {
-        let assetUrl = asset.url;
-        if (!assetUrl) {
-          assetUrl = base + asset.filename;
-        } else if (!assetUrl.startsWith("http")) {
-          assetUrl = base + assetUrl.replace(/^\/+/, "");
-        }
         byFilename[asset.filename] = {
-        ...asset,
+          ...asset,
           url: assetUrl,
         };
       }
-      };
-    }
-    const seenSupabase = new Set<string>();
-    for (const asset of supabaseAssets) {
-      if (asset.url && !seenSupabase.has(asset.filename)) {
-        seenSupabase.add(asset.filename);
-      for (const asset of staticAssetRows) {
-        let assetUrl = asset.url;
-        if (!assetUrl) {
-          assetUrl = base + asset.filename;
-        } else if (!assetUrl.startsWith("http")) {
-          assetUrl = base + assetUrl.replace(/^\/+/, "");
-        }
-        byFilename[asset.filename] = {
-        filename: asset.filename,
-        category: asset.category,
-        mimeType: asset.mime_type,
-        sizeBytes: asset.size_bytes,
-        url: asset.url,
-        };
+    } else {
+      for (const asset of supabaseAssets) {
+        byFilename[asset.filename] = asset;
       }
     }
     return byFilename;
