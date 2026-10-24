@@ -24,13 +24,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: pnpm
-      - name: Enable pnpm
+          cache: npx pnpm
+      - name: Enable npx pnpm
         run: corepack enable
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm install --frozen-lockfile
       - name: Build GitHub Pages site
-        run: pnpm run build:github
+        run: npm run build:github
         env:
           VITE_GITHUB_PAGES: "true"
           VITE_BASE_PATH: ${{ vars.PAGES_BASE_PATH }}
