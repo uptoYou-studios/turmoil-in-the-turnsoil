@@ -12,7 +12,11 @@ export type StoredSiteAsset = {
   url: string;
 };
 
-const staticAssetRows = staticAssets as StoredSiteAsset[];
+const base = import.meta.env.BASE_URL || "/";
+const staticAssetRows = (staticAssets as StoredSiteAsset[]).map(asset => ({
+  ...asset,
+  url: asset.url && !asset.url.startsWith("http") ? base + asset.url.replace(/^\/+/, "") : asset.url
+}));
 const PublishedAssetsContext = createContext<Record<string, StoredSiteAsset>>({});
 
 export function useStoredSiteAsset(filename: string) {
