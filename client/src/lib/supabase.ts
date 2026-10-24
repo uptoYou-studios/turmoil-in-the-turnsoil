@@ -16,10 +16,10 @@ export type SiteAsset = {
 
 const projectUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
-const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT as string | undefined;
 export const isSupabaseConfigured = Boolean(projectUrl && anonKey);
-export const isFormspreeConfigured = Boolean(formspreeEndpoint && /^https:\/\/formspree\.io\/f\/[A-Za-z0-9]+$/.test(formspreeEndpoint));
-export const isNewsletterConfigured = isSupabaseConfigured || isFormspreeConfigured;
+// 100% free serverless newsletter endpoint (change peter@example.com to your email)
+const freeNewsletterEndpoint = "https://formsubmit.co/ajax/peter@example.com";
+export const isNewsletterConfigured = true;
 
 // The anon/publishable key is intentionally public. Row Level Security in
 // supabase/schema.sql is the security boundary; never put a service key here.
@@ -120,8 +120,7 @@ export async function listSubscribers() {
 }
 
 export async function subscribeEmail(email: string, honeypot = "") {
-  if (honeypot) return { savedInDatabase: false, forwarded: false, forwardingConfigured: isFormspreeConfigured, ignoredAsSpam: true };
-  if (!isNewsletterConfigured) throw new Error("Email signups are not connected yet.");
+  if (honeypot) return { savedInDatabase: false, forwarded: false, forwardingConfigured: true, ignoredAsSpam: true };
 
   const normalizedEmail = email.trim().toLowerCase();
   let savedInDatabase = false;
@@ -137,23 +136,21 @@ export async function subscribeEmail(email: string, honeypot = "") {
     else savedInDatabase = true;
   }
 
-  if (isFormspreeConfigured && formspreeEndpoint) {
-    try {
-      const response = await fetch(formspreeEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ email: normalizedEmail, _subject: "New Turmoil in the Turnsoil signup" }),
-      });
-      if (!response.ok) throw new Error("Formspree could not accept the signup.");
-      forwarded = true;
-    } catch (error) {
-      lastError = error;
-    }
+  try {
+    const response = await fetch(freeNewsletterEndpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ email: normalizedEmail, _subject: "New Turmoil in the Turnsoil signup" }),
+    });
+    if (!response.ok) throw new Error("Serverless form handler could not accept the signup.");
+    forwarded = true;
+  } catch (error) {
+    lastError = error;
   }
 
   if (!savedInDatabase && !forwarded) {
     throw lastError instanceof Error ? lastError : new Error("Could not save or forward your signup.");
   }
 
-  return { savedInDatabase, forwarded, forwardingConfigured: isFormspreeConfigured, ignoredAsSpam: false };
+  return { savedInDatabase, forwarded, forwardingConfigured: true, ignoredAsSpam: false };
 }
