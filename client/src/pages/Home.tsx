@@ -16,7 +16,7 @@ export default function Home() {
           </div>
           <p>{siteContent.home.introMiddle}:</p>
           <div style={{ textAlign: "center", margin: "1.5rem 0" }}>
-            <Asset asset={siteContent.home.firebeetSketch} alt="Cute sketch of Firebeet" className="inline-art firebeet-art" />
+            <Asset asset={siteContent.home.firebeetSketch} alt="Cute sketch of Firebeet" style={{ maxWidth: "300px", height: "auto", display: "inline-block", margin: "10px" }} />
           </div>
         </div>
         <blockquote>{siteContent.home.verse}</blockquote>
