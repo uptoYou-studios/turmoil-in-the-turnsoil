@@ -17,8 +17,8 @@ export type SiteAsset = {
 const projectUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
 export const isSupabaseConfigured = Boolean(projectUrl && anonKey);
-// 100% free serverless newsletter endpoint (change peter@example.com to your email)
-const freeNewsletterEndpoint = "https://formsubmit.co/ajax/peter@example.com";
+// 100% free serverless newsletter endpoint updated to your iCloud email
+const freeNewsletterEndpoint = "https://formsubmit.co/ajax/peterturner824@icloud.com";
 export const isNewsletterConfigured = true;
 
 // The anon/publishable key is intentionally public. Row Level Security in
@@ -114,7 +114,7 @@ export async function setAssetPublished(id: string, isPublished: boolean) {
 
 export async function listSubscribers() {
   ensureConfigured();
-  const { data, error } = await supabase.from("newsletter_subscribers").select("id,email,created_at").order("created_at", { ascending: false });
+  const { data, error } = await supabase.from("subscribers").select("id,email,created_at").order("created_at", { ascending: false });
   if (error) throw error;
   return data as Array<{ id: string; email: string; created_at: string }>;
 }
@@ -128,7 +128,7 @@ export async function subscribeEmail(email: string, honeypot = "") {
   let lastError: unknown;
 
   if (isSupabaseConfigured) {
-    const { error } = await supabase.from("newsletter_subscribers").upsert(
+    const { error } = await supabase.from("subscribers").upsert(
       { email: normalizedEmail },
       { onConflict: "email", ignoreDuplicates: true },
     );
