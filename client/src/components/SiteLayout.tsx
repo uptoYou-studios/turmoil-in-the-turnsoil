@@ -76,7 +76,7 @@ export function Newsletter({ id }: { id: string }) {
             <label className="newsletter-honeypot" aria-hidden="true">Leave this blank<input name="website" tabIndex={-1} autoComplete="off" /></label>
             <button type="submit" disabled={busy}>{busy ? "Saving…" : "Subscribe"}</button>
           </form>
-          <p role="status"><small>{notice || (isSupabaseConfigured && isFormspreeConfigured ? "Your email is saved for episode updates; Formspree also forwards signups to the creator." : isSupabaseConfigured ? "Your email is stored for episode updates. Email forwarding is optional." : "Your signup will be forwarded to the creator by Formspree.")}</small></p>
+          <p role="status"><small>{notice || (isSupabaseConfigured ? "Your email is safely stored for Turmoil In The Turnsoil episode updates." : "Email signups are currently disabled.")}</small></p>
         </>
       ) : (
         <>
@@ -159,10 +159,10 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
     <PublishedAssetsContext.Provider value={assetsByFilename}>
       <div className="page">
         {fontRules && <style>{fontRules}</style>}
+        <style>{`.inline-art { max-width: 150px; height: auto; display: inline-block; margin: 10px; vertical-align: middle; }`}</style>
         <header className="site-header">
           <Link href="/" aria-label={`${siteContent.title} home`}>
-            <Asset asset={siteContent.assets.logoVertical} alt="UPTOYOU STUDIOS vertical logo" className="logo-vertical" />
-          </Link>
+            </Link>
           <h1 className="site-title">{siteContent.title}</h1>
           <p>{siteContent.studioName}</p>
         </header>
