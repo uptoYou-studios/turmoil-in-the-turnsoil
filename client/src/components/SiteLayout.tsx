@@ -159,7 +159,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
     <PublishedAssetsContext.Provider value={assetsByFilename}>
       <div className="page">
         {fontRules && <style>{fontRules}</style>}
-        <style>{`.inline-art { max-width: 150px; height: auto; display: inline-block; margin: 10px; vertical-align: middle; }`}</style>
+        <style>{`.inline-art { max-width: 150px; height: auto; display: inline-block; margin: 10px; vertical-align: middle;  .firebeet-art { max-width: 300px !important; }`}</style>
         <header className="site-header">
           <Link href="/" aria-label={`${siteContent.title} home`}>
             </Link>
