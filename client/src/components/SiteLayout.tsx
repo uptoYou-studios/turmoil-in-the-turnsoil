@@ -134,7 +134,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
       }
     } else {
       for (const asset of supabaseAssets) {
-        byFilename[asset.filename] = asset as StoredSiteAsset;
+        byFilename[asset.filename] = asset as unknown as StoredSiteAsset;
       }
     }
     return byFilename;
