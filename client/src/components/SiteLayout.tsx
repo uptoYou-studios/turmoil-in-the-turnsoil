@@ -13,7 +13,7 @@ export type StoredSiteAsset = {
 };
 
 const base = import.meta.env.BASE_URL || "/";
-const staticAssetRows = (staticAssets as StoredSiteAsset[]).map(asset => ({
+const staticAssetRows = (staticAssets as unknown as StoredSiteAsset[]).map(asset => ({
   ...asset,
   url: asset.url && !asset.url.startsWith("http") ? base + asset.url.replace(/^\/+/, "") : asset.url
 }));
@@ -134,7 +134,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
       }
     } else {
       for (const asset of supabaseAssets) {
-        byFilename[asset.filename] = asset;
+        byFilename[asset.filename] = asset as StoredSiteAsset;
       }
     }
     return byFilename;
