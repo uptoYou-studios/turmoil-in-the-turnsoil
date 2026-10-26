@@ -46,6 +46,13 @@ export async function listPublishedAssets(): Promise<any[]> {
   return [];
 }
 
+export async function listSubscribers() {
+  if (!isSupabaseConfigured) return [];
+  const { data, error } = await supabase.from("subscribers").select("id,email,created_at").order("created_at", { ascending: false });
+  if (error) throw error;
+  return data as Array<{ id: string; email: string; created_at: string }>;
+}
+
 export async function subscribeEmail(email: string, honeypot = "") {
   if (honeypot) return { savedInDatabase: false, forwarded: false, forwardingConfigured: true, ignoredAsSpam: true };
 
