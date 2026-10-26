@@ -11,7 +11,6 @@ import Devos from "./pages/Devos";
 import Characters from "./pages/Characters";
 import AboutTurmoil from "./pages/AboutTurmoil";
 import AboutStudio from "./pages/AboutStudio";
-import FileStorage from "./pages/FileStorage";
 import Subscribers from "./pages/Subscribers";
 
 const isGitHubPages = import.meta.env.VITE_GITHUB_PAGES === "true";
