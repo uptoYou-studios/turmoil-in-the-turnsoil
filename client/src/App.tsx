@@ -25,7 +25,6 @@ function Router() {
         <Route path="/characters" component={Characters} />
         <Route path="/about-turmoil" component={AboutTurmoil} />
         <Route path="/about-studio" component={AboutStudio} />
-        <Route path={"/file-storage"} component={FileStorage} />
         <Route path={"/subscribers"} component={Subscribers} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
