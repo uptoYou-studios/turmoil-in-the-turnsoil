@@ -169,8 +169,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
         <hr />
         <nav aria-label="Main navigation">
           {siteContent.navigation.map((item, index) => <span key={item.href}>{index > 0 && " | "}<Link href={item.href} aria-current={location === item.href ? "page" : undefined}>{item.label}</Link></span>)}
-          {isGitHubPages && isSupabaseConfigured && <span> | <Link href="/file-storage">File Storage</Link>{isAdmin && <> | <Link href="/subscribers">Subscribers</Link> | <button type="button" className="text-link" onClick={logout}>Sign out</button></>}</span>}
-          {!isGitHubPages && session && isAdmin && <span> | <Link href="/file-storage">File Storage</Link></span>}
+          {isAdmin && <> | <Link href="/subscribers">Subscribers</Link> | <button type="button" className="text-link" onClick={logout}>Sign out</button></>}
         </nav>
         <hr />
         <main className="route-content">{children}</main>
