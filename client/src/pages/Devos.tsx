@@ -7,6 +7,16 @@ export default function Devos() {
     <SiteLayout>
       <section aria-labelledby="devos-heading">
         <h2 id="devos-heading">Devos</h2>
+        <p style={{ fontFamily: "'TurnsoilBody', sans-serif" }}>
+          Each episode of Turmoil in the Turnsoil has Bible verses hidden throughout the panels, among the margins, and incorporated into the art. Each verse reveals a biblical truth that is tied to a specific moment, character, or theme in the story. Each devotional explains the context of the verses and illustrates how they tie in to the story.
+        </p>
+        <p style={{ fontFamily: "'TurnsoilBody', sans-serif" }}>
+          Try your best at digging up all the verses!
+        </p>
+        <br />
+        <p style={{ fontFamily: "'TurnsoilEmphasis', sans-serif" }}>
+          (It is recommended to read the episode before reading its corresponding devotional).
+        </p>
         <ol className="episode-list">
           {siteContent.devos.map((devo) => (
             <DevotionalItem key={devo.number} devo={devo} />
