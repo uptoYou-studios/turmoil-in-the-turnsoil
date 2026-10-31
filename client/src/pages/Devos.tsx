@@ -13,7 +13,6 @@ export default function Devos() {
         <p style={{ fontFamily: "'TurnsoilBody', sans-serif" }}>
           Try your best at digging up all the verses!
         </p>
-        <br />
         <p style={{ fontFamily: "'TurnsoilEmphasis', sans-serif" }}>
           (It is recommended to read the episode before reading its corresponding devotional).
         </p>
